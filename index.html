@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio src="./files/audio/Jah Khalib - Медина.mp3"></audio>
+
+    <div class="app">
+        <!-- Controls Section -->
+        <div class="controls">
+            <img src="./files/image/gramafon.png" class="cover animation-pause" alt="Gramophone">
+            <img src="./files/image/maxresdefault.jpg" class="music-image animation-pause" alt="Music Cover">
+
+            <div>
+                <div class="controls-btn">
+                    <button id="prev" aria-label="Previous">
+                        <i class="fa-solid fa-backward"></i>
+                    </button>
+                    <button id="play" aria-label="Play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button id="pause" aria-label="Pause">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+                    <button id="next" aria-label="Next">
+                        <i class="fa-solid fa-forward"></i>
+                    </button>
+                </div>
+
+                <marquee class="music-info-active" direction="right"></marquee>
+
+                <div class="time-info">
+                    <input type="range" id="scrollbar" min="0" value="0" />
+                    <span class="currentTime">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music List Section -->
+        <div class="music-list"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./data.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>

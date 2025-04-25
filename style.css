@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.music-list {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.music-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://png.pngtree.com/background/20211217/original/pngtree-note-music-logo-watercolor-background-picture-image_1589075.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.app {
+  width: 370px;
+  height: 470px;
+  border: 2px solid;
+  border-top-color: rgba(9, 9, 8, 1);
+  border-right-color: rgba(246, 164, 57, 1);
+  border-bottom-color: rgba(166, 0, 34, 1);
+  border-radius: 7px;
+  padding: 10px;
+  background: url("https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px 1px rgb(75, 47, 75);
+}
+.controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(61, 46, 61);
+}
+.controls .cover,
+.music-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  animation: rotate 1s linear infinite;
+  animation-duration: 2s;
+}
+.cover {
+  position: absolute;
+  opacity: 0.6;
+  left: 27px;
+  z-index: 1;
+}
+.animation-pause {
+  animation-play-state: paused !important;
+  animation: rotate 3s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+.active-btn,
+button:active {
+  color: rgb(190, 22, 42);
+}
+.controls-btn {
+  display: flex;
+  gap: 15px;
+}
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  height: 300px;
+  overflow-y: scroll;
+}
+.music {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid;
+  padding: 4px;
+}
+.music-active {
+  color: rgb(190, 22, 42);
+}
+.music img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+}
+.music-info-active {
+  margin-top: 10px;
+  font-size: 9px;
+  width: 125px;
+}
+#scrollbar {
+  display: block;
+  margin-top: 15px;
+  height: 2px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.5rem;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 1px;
+  cursor: pointer;
+  appearance: none;
+  background: rgb(0, 0, 0);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 2px;
+  background: rgb(190, 22, 42);
+  margin-top: -6.5px;
+  border-radius: 35px;
+}
+.time-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.currentTime {
+  font-size: 10px;
+  margin-bottom: -13px;
+}
